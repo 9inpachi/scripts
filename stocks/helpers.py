@@ -12,7 +12,7 @@ Helper Functions
 def make_get_request(url, params):
     """
     Make get request to a URL with specified parameters.
-.
+
     Arguments:
         url: URL to send the request to.
         params: Parameters of the get request.
@@ -59,7 +59,7 @@ def get_tech_stocks():
 def write_stock_details_to_csv(filename, stock_details):
     """
     Write details of a stock to a file.
-.
+
     Arguments:
         filename: Name of the csv file (without extension) to write the stock details to.
         stock_details: Dictionary containing the details of the stock.

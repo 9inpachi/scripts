@@ -1,5 +1,7 @@
 # Stocks
 
+A script to write details of the most volatile tech stock to a `csv` file.
+
 ## Usage
 
 Run the following command in your terminal.

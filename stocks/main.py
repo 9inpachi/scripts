@@ -7,10 +7,8 @@ Main Program
 """
 
 if __name__ == "__main__":
-    stock_prices = get_tech_stocks()
-
     # `latest_prices` contains the current price of each company's stock. It's not used anywhere.
-    latest_prices, most_volatile_stock = stock_prices
+    latest_prices, most_volatile_stock = get_tech_stocks()
 
     filename = "most_volatile_stock"
     write_stock_details_to_csv(filename, most_volatile_stock)
