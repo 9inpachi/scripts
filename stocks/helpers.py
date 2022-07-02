@@ -9,9 +9,9 @@ Helper Functions
 
 # Time Complexity = O(1)
 # Space Complexity = O(1)
-def make_get_request(url, params):
+def make_authorized_get_request(url, params):
     """
-    Make get request to a URL with specified parameters.
+    Make an authorized get request to a URL with specified parameters.
 
     Arguments:
         url: URL to send the request to.
@@ -20,7 +20,11 @@ def make_get_request(url, params):
         Response of the request as a JSON dictionary.
     """
     try:
-        return requests.get(url, headers=constants.auth_header, params=params).json()
+        response = requests.get(url, headers=constants.auth_header, params=params).json()
+        if "error" in response:
+            raise SystemExit("An error occurred: " + response["error"])
+
+        return response
     except requests.exceptions.RequestException as exception:
         raise SystemExit(exception)
 
@@ -41,7 +45,7 @@ def get_tech_stocks():
 
     for company, stock_symbol in constants.stock_symbols.items():
         req_params = {"symbol": stock_symbol}
-        quote_response = make_get_request(constants.quote_endpoint, req_params)
+        quote_response = make_authorized_get_request(constants.quote_endpoint, req_params)
         current_prices[company] = quote_response["c"]
 
         percent_change = abs(quote_response["dp"])
@@ -51,7 +55,7 @@ def get_tech_stocks():
             most_volatile_stock = quote_response
             most_volatile_stock["symbol"] = stock_symbol
 
-    return current_prices,  most_volatile_stock
+    return current_prices, most_volatile_stock
 
 
 # Time Complexity = O(1)
