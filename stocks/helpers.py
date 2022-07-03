@@ -29,8 +29,8 @@ def make_authorized_get_request(url, params):
         raise SystemExit(exception)
 
 
-# Time Complexity = O(stock_symbols.size()) = O(n)
-# Space Complexity = O(stock_symbols.size()) = O(n)
+# Time Complexity = O(len(stock_symbols)) = O(n)
+# Space Complexity = O(len(stock_symbols)) = O(n)
 def get_tech_stocks():
     """
     Get current price of tech stocks and details of the most volatile stock.
