@@ -1,6 +1,6 @@
 {
   "name": "echoenv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI to echo commands for setting environment variables from .env files.",
   "bin": {
     "echoenv": "echoenv.js"
