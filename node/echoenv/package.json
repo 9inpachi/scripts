@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/9inpachi/scripts/issues"
   },
+  "files": [
+    "echoenv.js"
+  ],
   "keywords": [
     "cli",
     "node",
