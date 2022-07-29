@@ -1,0 +1,29 @@
+{
+  "name": "echoenv",
+  "version": "1.0.0",
+  "description": "A CLI to echo commands for setting environment variables from .env files.",
+  "main": "echoenv.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9inpachi/scripts.git",
+    "directory": "node/echoenv"
+  },
+  "bin": "echoenv.js",
+  "keywords": [
+    "cli",
+    "node",
+    ".env",
+    "environment",
+    "variables",
+    "powershell",
+    "bash",
+    "cmd",
+    "set"
+  ],
+  "author": "Fawad Ali <m.fawaadali98@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
