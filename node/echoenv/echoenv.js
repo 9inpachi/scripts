@@ -28,7 +28,7 @@ function parseOptions() {
 function validateFile(fileName) {
   const scriptName = basename(__filename);
   if (fileName.includes(scriptName) || !existsSync(fileName)) {
-    displayUsage();
+    displayUsage("Unable to find the specified file.");
   }
 }
 
@@ -84,13 +84,17 @@ function inferEnvironment() {
   return "powershell";
 }
 
-function displayUsage() {
+function displayUsage(message) {
+  if (message) {
+    console.log("\n", message);
+  }
+
   console.log(`
 Usage:
   echoenv [--env <environment>] <file>
 
 Options:
-  --env     (bash, powershell, cmd) environment for which to echo variables
+  --env     (bash, powershell, cmd) environment for which to echo variables. Inferred if not specified.
   --help
 `);
 
