@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { existsSync, readFileSync } = require("fs");
 const { basename } = require("path");
 
@@ -86,7 +88,7 @@ function inferEnvironment() {
 
 function displayUsage(message) {
   if (message) {
-    console.log("\n", message);
+    console.log("\n" + message);
   }
 
   console.log(`
