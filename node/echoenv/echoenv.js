@@ -96,7 +96,9 @@ Usage:
   echoenv [--env <environment>] <file>
 
 Options:
-  --env     (bash, powershell, cmd) environment for which to echo variables. Inferred if not specified.
+  --env     (bash, powershell, cmd)
+            Environment for which to echo variables.
+            Inferred if not specified (only for Bash and Powershell).
   --help
 `);
 

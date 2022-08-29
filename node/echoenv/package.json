@@ -6,7 +6,7 @@
     "echoenv": "echoenv.js"
   },
   "main": "echoenv.js",
-  "homepage": "https://github.com/9inpachi/scripts/tree/master/node/echoenv",
+  "homepage": "https://github.com/9inpachi/scripts/tree/master/node/echoenv#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/9inpachi/scripts.git",
